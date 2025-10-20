@@ -1,0 +1,35 @@
+// Asignar nuevo valor
+db.usuarios.updateOne(
+  { "nombre": "Juan" },
+  { $set: { "activo": true } }
+)
+
+// Incrementar un campo numérico
+db.usuarios.updateOne(
+  { "nombre": "Juan" },
+  { $inc: { "edad": 1 } } // edad += 1
+)
+
+// Eliminar un campo
+db.usuarios.updateOne(
+  { "nombre": "Juan" },
+  { $unset: { "telefono": "" } }
+)
+
+// Agregar elemento a un array
+db.usuarios.updateOne(
+  { "nombre": "Juan" },
+  { $push: { "hobbies": "fútbol" } }
+)
+
+// Agregar solo si no existe
+db.usuarios.updateOne(
+  { "nombre": "Juan" },
+  { $addToSet: { "hobbies": "leer" } }
+)
+
+// Eliminar el primer elemento del array
+db.usuarios.updateOne(
+  { "nombre": "Juan" },
+  { $pop: { "hobbies": -1 } }
+)

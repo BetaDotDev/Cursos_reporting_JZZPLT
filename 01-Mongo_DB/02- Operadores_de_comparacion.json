@@ -1,0 +1,31 @@
+db.productos.find({
+  "precio": { $eq: 100 }        // Igual a 100
+})
+
+db.productos.find({
+  "precio": { $ne: 100 }        // No igual a 100
+})
+
+db.productos.find({
+  "stock": { $gt: 50 }          // Mayor que 50
+})
+
+db.productos.find({
+  "stock": { $gte: 50 }         // Mayor o igual que 50
+})
+
+db.productos.find({
+  "stock": { $lt: 50 }          // Menor que 50
+})
+
+db.productos.find({
+  "stock": { $lte: 50 }         // Menor o igual que 50
+})
+
+db.productos.find({
+  "categoria": { $in: ["ropa", "calzado"] } // Está en el array
+})
+
+db.productos.find({
+  "categoria": { $nin: ["juguetes", "tecnología"] } // No está en el array
+})

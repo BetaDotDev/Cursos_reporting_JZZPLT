@@ -1,0 +1,82 @@
+// Crear base de datos (en shell de Mongo DB)
+
+use biblioteca
+
+// mostrar colecciones
+
+show collections
+
+"""
+Create
+
+"""
+
+// Insertar un documento individual
+db.usuarios.insertOne({
+  "nombre": "Juan Pérez",
+  "edad": 28,
+  "ciudad": "Madrid",
+  "activo": true,
+  "hobbies": ["fútbol", "cine", "viajar"]
+})
+
+// Insertar varios documentos a la vez
+db.usuarios.insertMany([
+  {
+    "nombre": "María López",
+    "edad": 32,
+    "ciudad": "Barcelona",
+    "activo": false,
+    "hobbies": ["lectura", "senderismo"]
+  },
+  {
+    "nombre": "Carlos Gómez",
+    "edad": 40,
+    "ciudad": "Sevilla",
+    "activo": true,
+    "hobbies": ["baloncesto", "videojuegos"]
+  }
+])
+
+// Ejemplo de inserción con fecha y campo anidado
+db.ventas.insertOne({
+  "cliente": { "nombre": "Pedro Ruiz", "email": "pedro@correo.com" },
+  "fecha": new Date(),
+  "total": 249.99,
+  "productos": [
+    { "nombre": "Auriculares", "cantidad": 1, "precio": 49.99 },
+    { "nombre": "Portátil", "cantidad": 1, "precio": 200.00 }
+  ],
+  "pagado": true
+})
+
+// Insertar muchos documentos con estructura similar
+db.productos.insertMany([
+  { "nombre": "Teclado", precio: 30, stock: 50, categoria: "accesorios" },
+  { "nombre": "Ratón", precio: 20, stock: 100, categoria: "accesorios" },
+  { "nombre": "Monitor", precio: 200, stock: 25, categoria: "pantallas" },
+  { "nombre": "Silla Gamer", precio: 150, stock: 15, categoria: "muebles" }
+]), {"ordered":false}
+
+
+db.libros.insertMany([
+  {
+  "_id":1,
+  "titulo": "Lo que sea2",
+  "year": 2025,
+  "ciudad": "Vigo",
+  "autor": "Yo mismo",
+  "categoria": ["Terror"]
+  },
+  {
+  "_id":2,
+  "titulo": "Lo que sea3",
+  "year": 2022,
+  "ciudad": "Barcelona",
+  "autor": "Yo mismo",
+  "categoria": ["Historico"],
+  "disponible": true
+  }
+],{"ordered":false}) // con el ordered "salta" los duplicados
+
+

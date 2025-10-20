@@ -1,0 +1,2 @@
+// Mostrar solo nombre y edad (ocultar _id)
+db.usuarios.find({}, { "nombre": 1, "edad": 1, "_id": 0 })

@@ -1,0 +1,8 @@
+db.usuarios.find({
+  "edad": { $exists: true }     // El campo "edad" existe
+})
+
+db.usuarios.find({
+  "edad": { $type: "int" }      // Tipo de dato entero
+})
+2

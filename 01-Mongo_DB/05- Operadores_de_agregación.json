@@ -1,0 +1,13 @@
+db.ventas.aggregate([
+  { $match: { "estado": "pagado" } },
+  { $group: {
+      "_id": "$cliente",
+      "totalGastado": { $sum: "$monto" },
+      "promedio": { $avg: "$monto" },
+      "maximo": { $max: "$monto" },
+      "minimo": { $min: "$monto" },
+      "cantidad": { $count: {} }
+    }
+  },
+  { $sort: { "totalGastado": -1 } } // Ordenar descendente
+])

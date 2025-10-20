@@ -1,0 +1,40 @@
+
+// Eliminar un solo documento que cumpla una condición
+db.usuarios.deleteOne({ nombre: "Juan Pérez" })
+
+// Eliminar varios documentos que cumplan una condición
+db.usuarios.deleteMany({ activo: false })
+
+// Eliminar todos los documentos de la colección (⚠️ cuidado)
+db.usuarios.deleteMany({})
+
+// Eliminar por rango de valores
+db.usuarios.deleteMany({ edad: { $lt: 18 } }) // menores de edad
+
+// Eliminar documentos que no tengan un campo
+db.usuarios.deleteMany({ telefono: { $exists: false } })
+
+// Eliminar por múltiples condiciones ($or)
+db.usuarios.deleteMany({
+  $or: [{ ciudad: "Madrid" }, { ciudad: "Barcelona" }]
+})
+
+// Eliminar un documento y devolverlo (findOneAndDelete)
+db.usuarios.findOneAndDelete({ nombre: "Carlos Gómez" })
+
+// Eliminar todos los registros de una colección con drop()
+db.productos.drop() // ⚠️ Elimina la colección completa (no solo sus datos)
+
+// Eliminar una base de datos completa (⚠️ cuidado extremo)
+db.dropDatabase()
+
+// Eliminar documentos con un valor dentro de un array
+db.usuarios.deleteMany({ hobbies: "baloncesto" })
+
+// Eliminar documentos con condición compuesta ($and)
+db.usuarios.deleteMany({
+  $and: [{ activo: false }, { edad: { $gte: 40 } }]
+})
+
+// Eliminar documentos con campo anidado
+db.usuarios.deleteMany({ "direccion.ciudad": "Valencia" })

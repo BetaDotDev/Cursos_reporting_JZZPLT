@@ -1,0 +1,87 @@
+// Actualizar un solo documento (updateOne)
+db.usuarios.updateOne(
+  { nombre: "Juan Pérez" },          // Filtro
+  { $set: { activo: false } }        // Actualización
+)
+
+// Actualizar varios documentos (updateMany)
+db.usuarios.updateMany(
+  { activo: false },                 // Filtro
+  { $set: { ciudad: "Desconocida" } }
+)
+
+// Incrementar o decrementar valores numéricos ($inc)
+db.usuarios.updateOne(
+  { nombre: "Carlos Gómez" },
+  { $inc: { edad: 1 } }              // Suma 1 a la edad
+)
+
+// Reemplazar un documento completo (replaceOne)
+db.usuarios.replaceOne(
+  { nombre: "María López" },
+  { nombre: "María López", edad: 33, activo: true, ciudad: "Madrid" }
+)
+
+// Eliminar un campo de un documento ($unset)
+db.usuarios.updateOne(
+  { nombre: "Laura Sánchez" },
+  { $unset: { telefono: "" } }       // Elimina el campo "telefono"
+)
+
+// Establecer múltiples valores ($set)
+db.usuarios.updateOne(
+  { nombre: "Juan Pérez" },
+  { $set: { ciudad: "Madrid", edad: 30, activo: true } }
+)
+
+// Agregar un valor a un array ($push)
+db.usuarios.updateOne(
+  { nombre: "Juan Pérez" },
+  { $push: { hobbies: "pádel" } }
+)
+
+// Agregar varios valores al array ($push + $each)
+db.usuarios.updateOne(
+  { nombre: "Carlos Gómez" },
+  { $push: { hobbies: { $each: ["leer", "cocinar"] } } }
+)
+
+// Agregar un valor solo si no existe ($addToSet)
+db.usuarios.updateOne(
+  { nombre: "Laura Sánchez" },
+  { $addToSet: { hobbies: "fotografía" } }
+)
+
+// Quitar un valor específico de un array ($pull)
+db.usuarios.updateOne(
+  { nombre: "Juan Pérez" },
+  { $pull: { hobbies: "cine" } }
+)
+
+// Quitar varios valores ($pullAll)
+db.usuarios.updateOne(
+  { nombre: "Carlos Gómez" },
+  { $pullAll: { hobbies: ["leer", "cocinar"] } }
+)
+
+// Actualizar campo dentro de un objeto anidado
+db.usuarios.updateOne(
+  { nombre: "Juan Pérez" },
+  { $set: { "direccion.ciudad": "Barcelona" } }
+)
+
+// Actualizar con condición compuesta ($and)
+db.usuarios.updateMany(
+  { $and: [{ activo: true }, { edad: { $lt: 30 } }] },
+  { $set: { grupo: "Jóvenes activos" } }
+)
+
+// Ejemplo con varios operadores juntos
+db.usuarios.updateOne(
+  { nombre: "Carlos Gómez" },
+  {
+    $set: { activo: true },
+    $inc: { edad: 2 },
+    $addToSet: { hobbies: "deporte" }
+  }
+)

@@ -1,0 +1,19 @@
+// $and: Todos deben cumplirse
+db.usuarios.find({
+  $and: [{ "edad": { $gte: 18 } }, { "activo": true }]
+})
+
+// $or: Al menos uno debe cumplirse
+db.usuarios.find({
+  $or: [{ "ciudad": "Madrid" }, { "ciudad": "Barcelona" }]
+})
+
+// $not: Niega una condición
+db.usuarios.find({
+  "edad": { $not: { $gte: 18 } } // menores de 18
+})
+
+// $nor: Ninguna de las condiciones debe cumplirse
+db.usuarios.find({
+  $nor: [{ "ciudad": "Madrid" }, { "ciudad": "Barcelona" }]
+})
