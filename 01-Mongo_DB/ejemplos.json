@@ -1,0 +1,8 @@
+
+
+db.usuarios.
+    find({"edad"{"$gte":18}}, // filtro
+    { "nombre": 1, "edad": 1, "_id": 0 }) // Proyeccion
+    .sort("nombre":1) // Ordenar, positivo para descendente, negativo para ascendente.
+    .limit(10) // limite de registros
+    .skip(2) //Se salta la cantidad de registros que le indicamos 
