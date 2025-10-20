@@ -75,3 +75,7 @@ db["movies"].find({"type":"series","$or":[{"year":{"$gte":1980,"$lte":2000}},{"l
 // agregate
 
 db["movies"].aggregate([{"$match":{"year":{"$gt":2014}}},{"$project":{"title":1,"year":1,"imdb.rating":1, "_id":0}}])
+
+db["movies"].aggregate([{"$match":{"year":{"$gt":2014}}},{"$project":{"title":1,"year":1,"imdb.rating":1, "_id":0, "total":{"$multiply":["imdb.rating",2 ]}}}])
+
+db["movies"].aggregate([{"$group":{"_id":"year"}}, "$avg"{"imdb.rating"}]).limit(5)
