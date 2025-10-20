@@ -72,3 +72,6 @@ db["movies"].find({"$and":[{"type": {"$eq":"movie"}},{"year":{"$gte":2000}}, {"y
 db["movies"].find({"type":"series","$or":[{"year":{"$gte":1980,"$lte":2000}},{"languages": "French"}]})
 
 
+// agregate
+
+db["movies"].aggregate([{"$match":{"year":{"$gt":2014}}},{"$project":{"title":1,"year":1,"imdb.rating":1, "_id":0}}])
