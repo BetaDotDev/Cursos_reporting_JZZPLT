@@ -79,3 +79,8 @@ db["movies"].aggregate([{"$match":{"year":{"$gt":2014}}},{"$project":{"title":1,
 db["movies"].aggregate([{"$match":{"year":{"$gt":2014}}},{"$project":{"title":1,"year":1,"imdb.rating":1, "_id":0, "total":{"$multiply":["imdb.rating",2 ]}}}])
 
 db["movies"].aggregate([{"$group":{"_id":"year"}}, "$avg"{"imdb.rating"}]).limit(5)
+
+
+// find con $not
+
+db.movies.find({"year": {"$not":{"$type": "number"}}} ,{'year': 1, "title":1}).count()
