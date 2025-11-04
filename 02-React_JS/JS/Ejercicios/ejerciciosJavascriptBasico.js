@@ -84,10 +84,10 @@ console.log(clasificarEdad(70));  // "Adulto mayor"
 
 function obtenerLetra(calificacion) {
   // Tu código aquí
-    if (calificacion >=90 && calificacion <= 100){
+    if (calificacion >=90 && calificacion <= 100){  // si es mayor que 90 Y es menor que 100, imprime A
         console.log("A")
     }
-    else if (calificacion >= 80 && calificacion <= 89 ){
+    else if (calificacion >= 80 && calificacion <= 89 ){ // si es mayor que 80 Y es menor que 89, imprime B
         console.log("B")
     }
     else if (calificacion >= 70 && calificacion <= 79 ){
@@ -151,12 +151,13 @@ function sumaAcumulativa(limite) {
   let suma = 0;
   let i = 1;
   // Tu código aquí con while
-  while (i < sumaAcumulativa ){
+  while (i <= limite ){
 
-        suma = i + 1
-        i = suma
+        suma += i 
+        i++
     }
 
+// aqui termina
   return suma;
 }
 
@@ -169,7 +170,7 @@ function encontrarPosicion(array, elemento) {
   let i = 0;
   // Tu código aquí con while
   while (i<array.length){
-    if (arr[i] === elemento) {
+    if (arr[indice] === elemento) {
       posicionEncontrada = i;
       break;
     }
@@ -182,6 +183,9 @@ function encontrarPosicion(array, elemento) {
 const frutas = ["manzana", "pera", "naranja", "uva"];
 console.log(encontrarPosicion(frutas, "naranja")); // 2
 console.log(encontrarPosicion(frutas, "kiwi"));    // -1
+
+
+
 
 
 

@@ -20,3 +20,9 @@ comandos para ver versiones:
 npm --version
 npm install -g npm@[version que quertemos]
 
+
+// para montar el proyecto de react tenemos que irnos a la ruta padre del proyecto y copiar el sigueinte comando o seguir el enlace: 
+
+// https://react.dev/learn/build-a-react-app-from-scratch
+
+npm create vite@latest my-app -- --template react

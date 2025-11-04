@@ -85,6 +85,76 @@ players.map(player =>{
     }
 })
 
+// ----- Objetos -----
+
+// Es una restructura de datos formados poarejas clave-valor
+
+const enemy1 = {
+    name: "Feldespato",
+    level: 3,
+    skills: ["Fuego blanco", "Llorar desesperadamente"]
+}
+
+console.log(enemy1.name)
+
+// ----- funcion -----
+
+const points = [ 2 , 4 , 6 ]
+
+function sum(numbers){
+    let result =0
+    // desde el primero hasta el ultimo
+    let i = 0
+
+    while (i < numbers.length) {
+        result = result + numbers[1]
+        
+        i++
+    }
+    // Añadir el valor del elemento consultado al total
+
+
+    return result // una funcion siempre tiene return al final de la funcion
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
