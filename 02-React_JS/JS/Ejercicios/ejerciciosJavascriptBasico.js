@@ -146,23 +146,17 @@ contarHastaDiez();
 
 // Salida esperada: 1 2 3 4 5 6 7 8 9 10
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Ejercicio 4.2: Suma acumulativa
 function sumaAcumulativa(limite) {
   let suma = 0;
   let i = 1;
   // Tu código aquí con while
+  while (i < sumaAcumulativa ){
+
+        suma = i + 1
+        i = suma
+    }
+
   return suma;
 }
 
@@ -174,12 +168,29 @@ console.log(sumaAcumulativa(10));  // 55 (1+2+3+...+10)
 function encontrarPosicion(array, elemento) {
   let i = 0;
   // Tu código aquí con while
+  while (i<array.length){
+    if (arr[i] === elemento) {
+      posicionEncontrada = i;
+      break;
+    }
+    i++;
+  }
+
   // Devuelve el índice si lo encuentra, -1 si no
 }
 
 const frutas = ["manzana", "pera", "naranja", "uva"];
 console.log(encontrarPosicion(frutas, "naranja")); // 2
 console.log(encontrarPosicion(frutas, "kiwi"));    // -1
+
+
+
+
+
+
+
+
+
 
 // Ejercicio 4.4: Generar números pares
 
@@ -196,6 +207,21 @@ function primerosCincoPares() {
 console.log(primerosCincoPares()); // [2, 4, 6, 8, 10]
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 5. Arrays y el método map()
 
 // Ejercicio 5.1: Duplicar números
@@ -209,6 +235,8 @@ console.log(duplicados); // [2, 4, 6, 8, 10]
 
 // Ejercicio 5.2: Nombres a mayúsculas
 
+
+
 const nombres = ["ana", "carlos", "maría", "josé"];
 
 const nombresMayus = nombres.map(/* Tu código aquí */);
@@ -218,9 +246,9 @@ console.log(nombresMayus); // ["ANA", "CARLOS", "MARÍA", "JOSÉ"]
 
 // Ejercicio 5.3: Crear objetos persona
 
-const nombres = ["Pedro", "Laura", "Miguel"];
+const nombress = ["Pedro", "Laura", "Miguel"];
 
-const personas = nombres.map(/* Tu código aquí */);
+const personas = nombress.map(/* Tu código aquí */);
 
 console.log(personas);
 // Resultado esperado:
