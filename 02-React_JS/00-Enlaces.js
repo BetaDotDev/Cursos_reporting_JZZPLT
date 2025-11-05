@@ -26,3 +26,13 @@ npm install -g npm@[version que quertemos]
 // https://react.dev/learn/build-a-react-app-from-scratch
 
 npm create vite@latest my-app -- --template react
+
+// IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+// 
+/*
+
+SUELE DAR EL SIGUIENTE ERROR: 
+Pre-transform error: Failed to load url /src/main.jsx (resolved id: /src/main.jsx). Does the file exist?
+
+Este error es porque la ruta es demasiado larga, pasa todo el proyecto a tu directorio raiz y lanzalo de nuevo
+*/

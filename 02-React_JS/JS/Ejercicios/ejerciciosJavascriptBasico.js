@@ -204,6 +204,10 @@ function primerosCincoPares() {
   const pares = [];
   
   // Tu código aquí con while
+
+  while (pares.length()>=5){
+    contador
+  }
   
   return pares;
 }
