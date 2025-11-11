@@ -16,4 +16,4 @@ function Creature (name,image,description) {
         </div>
     )
 }
-export default Main
+export default Creature

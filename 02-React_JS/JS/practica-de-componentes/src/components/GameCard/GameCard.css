@@ -1,0 +1,38 @@
+.card{
+    height: 720px;
+    width:480px
+}
+
+.game-card {
+  flex: 0 0 auto;              /* 🔥 evita que las tarjetas se estiren */
+  width: 180px;                /* tamaño fijo para cada tarjeta */
+  background: #111;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.game-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.game-title {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.game-description {
+  font-size: 0.85rem;
+  color: #ccc;
+  padding: 0 0.5rem 0.5rem;
+}
