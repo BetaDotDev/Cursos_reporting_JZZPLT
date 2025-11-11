@@ -10,6 +10,8 @@ src/
 
 //Conecpto tecnico: renderizado condicional`
 
+// ternarios en react
+
 
 // Api Rest
 1) Funcion asincrona dentro de mi componente que poda a backend (una API REST) los datos cn la funcion fetch.
