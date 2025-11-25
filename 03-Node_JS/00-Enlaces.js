@@ -2,6 +2,11 @@
 
 drive.google.com/drive/folders/1YZu7aVOKhZPd7HPSAUCzkxme9Ev1FZYg?usp=sharing
 
+
+// Enlaces de telegram
+
+https://t.me/+jos3WptmjY9kYmI0
+
 // Cositas del profe
 
 https://github.com/diego-collado
