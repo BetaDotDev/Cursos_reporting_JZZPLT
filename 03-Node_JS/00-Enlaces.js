@@ -9,3 +9,6 @@ https://mega.nz/folder/rNkjgaLL#T1h4UREAebQvjdo5PpdWJA
 // Para HTML y CSS
 
 https://lenguajehtml.com/
+
+// Normalizar CSS
+https://necolas.github.io/normalize.css/
