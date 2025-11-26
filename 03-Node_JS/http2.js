@@ -34,7 +34,7 @@ const mime = {
 
 const servidor = http.createServer((peticion,respuesta) => {
     // 1.- Lo que pedimos
-    const url= new URL('htto://localhost:8888' + pedido.url)
+    const url= new URL('htto://localhost:8888' + peticion.url)
     // htto://localhost:8888/imagenes/logo.jpg
     // a Node le interesa: /imagenes/logo.jpg
 
