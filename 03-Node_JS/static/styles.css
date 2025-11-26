@@ -196,7 +196,7 @@ footer {
 
     }
     20% {
-        clip-path:inset(0 0 60% 0);
+        clip-path:inset(10% 0 60% 0);
         transform: translate(-2px,-1px);
             
     }
