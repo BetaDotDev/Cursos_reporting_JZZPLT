@@ -1,0 +1,16 @@
+{
+    "name":"todolist-node-crud",
+    "version":"1.0.0",
+    "description": "CRUD para lista de tareas",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies":{
+        "express":"^4.19.0"
+    },
+    "devdependencies":{
+        "nodemon":"^3.1.0"
+    }
+}
