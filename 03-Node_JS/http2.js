@@ -23,30 +23,30 @@ const http = require('node:http'); // módulo de protocolos comunicaciones, HTTP
 const fs = require('node:fs'); // módulo de filesystem
 const mime = {
     'html': 'text/html',
-    'css': 'text/html',
-    'jpg': 'text/jpg',
-    'ico' : 'iamge/x-icon',
+    'css': 'text/css',
+    'jpg': 'image/jpg',
+    'ico': 'image/x-icon',
     'mp3': 'audio/mpeg3',
-    'mp3': 'audio/mp4',
+    'mp4': 'video/mp4',
 }
 
 // Lógica de negocio
 
 const servidor = http.createServer((peticion,respuesta) => {
     // 1.- Lo que pedimos
-    const url= new URL('htto://localhost:8888' + peticion.url)
-    // htto://localhost:8888/imagenes/logo.jpg
+    const url= new URL('http://localhost:8888' + peticion.url)
+    // http://localhost:8888/imagenes/logo.jpg
     // a Node le interesa: /imagenes/logo.jpg
 
     //2.- Lo que voy buscando para cargar
     let camino = 'static' + url.pathname;
 
     if (camino === 'static/'){
-        camino = 'static/index.html;'; // si no me pide anda, me voy a index
+        camino = 'static/index.html'; // si no me pide anda, me voy a index
     }
 
     // 3.- Y si... Stat para controlar si está o no en el archivo
-    fdatasync.stat(camino,error =>{
+    fs.stat(camino, error =>{
         if(!error){
             // no hay error, archivo encontrado ... Pues a leer!!
             fs.readFile(camino, (error,contenido)=>{
@@ -67,11 +67,11 @@ const servidor = http.createServer((peticion,respuesta) => {
                     const mime = {
                         html:'text/html',
                         js: 'application/javascript',
-                        png: 'image/png'
+                        png: 'image/png'...
                     
                     }
                     */ 
-                    respuesta.writeHead(200, {'content-type': 'mimeType'});
+                    respuesta.writeHead(200, {'content-type': mimeType});
                     respuesta.write(contenido);
                     respuesta.end();
                 }
