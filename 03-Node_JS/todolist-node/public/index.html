@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>ToDoLiST - Tu CRUD de NodeJS</title>
 
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 <body>
     <!-- Contenedor del site completo -->
-    <div class = "app-container">
-        <h1 data-text="Mis tareas"> Mis tareas </h1>
+    <div class="app-container">
+        <h1 data-text="Mis tareas">Mis tareas</h1>
 
         <div id="error" class="error-message" style="display:none;"></div>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" 
+            placeholder="escribe algo..." autocomplete="off">
+            <button type="submit" class="add">Añadir</button>
+        </form>
+
+        <ul id="todo-list"></ul>
+
+        <div id="empty" class="empty-list">No hay tareas... ¡¡Crea tu 1ª!!</div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
