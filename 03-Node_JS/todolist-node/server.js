@@ -1,8 +1,55 @@
 const app = express()
 
+//declaracion e inicializacion  ------------------------------------------------------
+const { create } = require('domain');
+const expresss = require('express');//importacion del framework express
+const path = require ('path');
+const { title } = require('process');
 
+const app= express();
+const PORT = 3000;
+ 
+//Middleware de parseo a JSON
+app.use(express.json());
 
+// Ahora, vamos a ver donde entan los  archivos estaticos 
 
+app.use(express.static(path.join(__dirname,'public')));
+
+// BBDD en memoria
+
+let todos = [];//creacion de array vacio 
+let nextId = 1; //sirve para asignar identificadores unicos (ID) a cada tarea que agregues
+
+// RUTAS API CRUD ------------------------------------------------------
+                        
+
+// READ (R) - Obtener todas las tareas si un cliente visita la URL
+app.get('/api/todos', (req,res) =>{res.json(todos)});
+
+//CREATE (C) - Crear una tarea 
+app.post('/api/todos', (req, res) =>{
+    //Titulo
+    const {title} = req.body;
+
+    //¿El titulo esta vacio o solo tiene espacios?
+    if(!title || !title.trim()){
+        return res.status(400).json({ error:"400 Bad Request"})
+    };
+
+    //cracion del nuevo elemento en el array, es decir, un nuevo objeto
+
+    const newTodo = {
+        id: nextId++,
+        title: title.trim(),
+        completed :false,
+        createAT: new Date()
+    };
+
+    //Grabardoooo!!! // añade el registro al array
+    todos.push(newTodo);
+    res.status(201).json(newTodo)
+});
 
 
 

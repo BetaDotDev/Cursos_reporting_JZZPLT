@@ -223,3 +223,10 @@ footer {
     0% {text-shadow: 0 0 8px #ff00ff;opacity: 0.8;}
     100% {text-shadow: 0 0 18px #ff00ff, 0 0 30px #ff00ff; opacity:1;}
 }
+
+@media(max-width:600px){
+    body{padding:12px;}
+    h1{font-size: 1.8rem;}
+    ul li{padding:10px 12px;}
+
+}
