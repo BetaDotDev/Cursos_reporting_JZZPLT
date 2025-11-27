@@ -291,6 +291,7 @@ button:hover{
 }
 
 .todo-title{flex:1;}
+
 .todo-title.completed{text-decoration: lne-thougt;opacity:.6;}
 
 .todo-aciost{
@@ -309,4 +310,18 @@ button:hover{
     outline: none;
     font-family: 'Orbitron', sans-serif;
 
+}
+
+.error-message{
+    color:#ff4da6 ;
+    font-size:0.85rem;
+    margin-bottom:8px;
+    text-shadow: 0 0 8px #ff4da6;
+}
+
+.empty-list{
+    text-align:center;
+    font-size: 0.9rem;
+    opacity:0.8;
+    margin-top:10px;
 }

@@ -16,8 +16,8 @@ app.use(express.static(path.join(__dirname,'public')));
 
 // BBDD en memoria
 
-let todos = [];//creacion de array vacio 
-let nextId = 1; //sirve para asignar identificadores unicos (ID) a cada tarea que agregues
+let todos = [];// Creacion de array vacio 
+let nextId = 1; // Sirve para asignar identificadores unicos (ID) a cada tarea que agregues
 
 // RUTAS API CRUD ------------------------------------------------------
                         
@@ -74,11 +74,11 @@ app.put('/api/todos/:id', (req,res)=>{
 /// Delete (D) - Eliminación de tareas
 
 app.delete('/api/todos/:id', (req,res)=>{
-    // aqií tenemos la parte de la petición, editamos una ID determinada
+    // Aqui tenemos la parte de la petición, editamos una ID determinada
     const id = Number(req.params.id) // Parseamos la id para que no inyecten cualquier cosa
     const index = todos.findIndex( t => t.id === id); // Devuelve la posicion del elemento
 
-    //contemplamos ciertos "errores"
+    // Contemplamos ciertos "errores"
     if(index===-1){return res.status(404).json({error:'Tarea no encontrada, '})}
 
     const deleted = todos.splice(index,1)[0] //Borra 1 elemento del array todos en la posicion index
