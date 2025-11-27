@@ -7,11 +7,13 @@ drive.google.com/drive/folders/1YZu7aVOKhZPd7HPSAUCzkxme9Ev1FZYg?usp=sharing
 
 https://t.me/+jos3WptmjY9kYmI0
 
-// Cositas del profe
+// Cositas del profe (Diego)
 
 https://github.com/diego-collado
 
 https://mega.nz/folder/rNkjgaLL#T1h4UREAebQvjdo5PpdWJA
+
+https://mega.nz/folder/bDp0SIKZ#ftD6w-iHiXbEdswOZfTspA
 
 // Para HTML y CSS
 
