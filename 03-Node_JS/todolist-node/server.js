@@ -1,5 +1,3 @@
-const app = express()
-
 //declaracion e inicializacion  ------------------------------------------------------
 const { create } = require('domain');
 const expresss = require('express');//importacion del framework express
