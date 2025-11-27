@@ -230,3 +230,83 @@ footer {
     ul li{padding:10px 12px;}
 
 }
+
+/* Stilos propios de ToDoList */
+
+.app-container{
+    background:rgba(5,0,2,.85);
+    border-radius: 16px;
+    padding:20px;
+    margin-top:30px;
+    border: 1px solid rgba(0,234,255,.3);
+    box-shadow: 0 0 22px rgba(0,234,255,.4)
+}
+
+form{
+    display:flex; /* relativo a FLexBox*/
+    gap:10px; /* relativo a separaciones o espacios*/
+    margin-bottom: 16px;
+}
+
+input[type="text"]{
+    flex: 1;
+    padding:10px 12px;
+    border-radius:10px;
+    border: 10px solid rgba(0,234,255,.4);
+    background: rgba(5,0, 30, .9);
+    color: #f1f1f1;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+input[type="text"]::placeholder{color: rgba(241.241.241,.5);}
+
+button{
+    border: 1px solid rgba(0,234,255,.8);
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+    background: radical-gradient(circle at top, #00eaff 0, #006b88 60%, #00141a 100%);
+    color:#000;
+    font-weight: 700;
+    text-shadow: 0 0 4px #00eaff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2 ease;
+    font-family:'Orbitron', sans-serif;
+
+}
+
+button:hover{
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 0 12px #00eaff;
+    background: radial-gradient(circle at top, #00ffff 0, #00a2ff 60%, #001c33 100%);
+
+}
+
+.todo-item{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.todo-title{flex:1;}
+.todo-title.completed{text-decoration: lne-thougt;opacity:.6;}
+
+.todo-aciost{
+    margin-left:4px;
+    padding: 6px 10px;
+    font-size: .8rem;
+}
+
+.todo-edit-input{
+    flex:1;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,0,255,.5);
+    background: rgba(15,0,40,.9);
+    color: #f1f1f1;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+
+}
