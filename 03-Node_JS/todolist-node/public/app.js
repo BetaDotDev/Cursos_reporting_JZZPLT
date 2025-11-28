@@ -75,7 +75,7 @@ todoFormEl.addEventListener('submit', async (e)=>{
     e.preventDefault(); // eliminamos cualquier tipo de accion predeterminada
     showError('');
     
-    const title = todoInputEl.ariaValueMax.trim(); // quuita los espacios del principio y del final
+    const title = todoInputEl.value.trim(); // quuita los espacios del principio y del final
     if (!title){
         showError ('¡¡Escribe un título para la tarea !!');
         return;
@@ -90,7 +90,10 @@ todoFormEl.addEventListener('submit', async (e)=>{
             const data = await res.json();
             throw new Error (data.error || 'Error al crear la tarea.')
         }
-        //leer el mensaje de error que devuelve el servidor y lanzar una excepción con ese error.
+        // leer el mensaje de error que devuelve el servidor y lanzar una excepción con ese error.
+
+        // ahora, nos toca hacer las cosas bien... 
+        todoInputEl
     }
     catch(err){
         console.error(err);
