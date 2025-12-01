@@ -1,5 +1,5 @@
 {
-    "name":"todolist-node-crud",
+    "name":"tareaslist-node-crud",
     "version":"1.0.0",
     "description": "CRUD para lista de tareas",
     "main": "server.js",
