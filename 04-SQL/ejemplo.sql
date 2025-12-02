@@ -70,18 +70,20 @@ TIPOS D EDATOS EN SQL (CUALQUIER TIPO DE DBMS)
 CREATE DATABASE biblioteca;
 USE biblioteca;
 
+SHOW VARIABLES LIKE 'character_set_database';
+SHOW VARIABLES LIKE 'collation_database';
 
 /* Creacion estructurada de tablas*/
 
 CREATE TABLE autor (
 
-    id_autor INT AUTO_INCREMENT PRMARY KEY,
+    id_autor INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     pais VARCHAR(50)
 );
 
 CREATE TABLE libro (
-    id_libro INT AUTO_INCREMENT PRMARY KEY,
+    id_libro INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(150) NOT NULL,
     anio INT CHECK (anio >= 1500),
     id_autor INT NOT NULL,
