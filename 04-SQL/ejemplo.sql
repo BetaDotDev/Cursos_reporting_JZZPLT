@@ -74,7 +74,7 @@ USE biblioteca;
 SHOW VARIABLES LIKE 'character_set_database';
 SHOW VARIABLES LIKE 'collation_database';
 ALTER DATABASE biblioteca CHARACTER SET utf8 COLLATE utf8_spanish_ci; -- Actualiza la tabla a utf 8 
-ALTER TABLE * MODIFY * CONVERT TO CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+ 
 
 
 /* Creacion estructurada de tablas*/
@@ -135,3 +135,7 @@ UN POQUITO DE CIBER:
 
 
 */
+
+/*AHORA NOS TOCA METER DATOS*/
+
+
